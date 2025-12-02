@@ -147,7 +147,7 @@ const cardData = [
     date: "2024",
   },
   {
-    title: "Search Bar",
+    title: "Animated Search Bar",
     badge: "Beta",
     image: "/photos/12.webp",
     video: "https://u3bgis1zx3.ufs.sh/f/G0WCOBl973jKvaNtAuGXAF1xfQgIWncT6L2US5zBh0RtKvYE",
@@ -165,7 +165,7 @@ const cardData = [
     date: "2024",
   },
   {
-    title: "Tooltip",
+    title: "Animated Tooltip",
     badge: "Live",
     image: "/photos/14.webp",
     video: "https://u3bgis1zx3.ufs.sh/f/G0WCOBl973jK4YceBqzwpdjP61VLC4ik9sMHOvQ7WAutIfRU",

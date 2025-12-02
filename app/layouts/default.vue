@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col jakarta-sans">
+  <div class="flex flex-col jakarta-sans relative">
     <Navbar></Navbar>
     <slot></slot>
   </div>

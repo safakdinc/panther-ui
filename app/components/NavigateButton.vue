@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="props.data._path"
+    :to="props.data.path"
     class="w-full min-h-[185px] h-full flex flex-col gap-[8px] px-[24px] py-[32px] rounded-lg
       container"
     :class="{ 'items-end': props.right }"

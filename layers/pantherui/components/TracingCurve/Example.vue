@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 relative">
+  <div class="flex-1 relative" ref="trigger">
     <ClientOnly>
       <TracingCurveContainer :curveData="curveData"></TracingCurveContainer>
     </ClientOnly>
@@ -7,12 +7,17 @@
 </template>
 
 <script setup>
+const trigger = ref();
 const curveData = ref([
   {
     line: {
-      start: { x: 300, y: 0, z: 0 },
-      end: { x: 1200, y: 50, z: 0 },
-      curvature: { x: 100, y: 100 },
+      start: { x: 15, y: 0, z: 0 },
+      end: { x: 60, y: 5, z: 0 },
+      // Control points as percentages of container (x1, y1, x2, y2)
+      x1: 30,
+      y1: -30,
+      x2: 70,
+      y2: -20,
     },
     item: {
       title: "Step 1",
@@ -22,9 +27,12 @@ const curveData = ref([
   },
   {
     line: {
-      start: { x: 1200, y: 50, z: 0 },
-      end: { x: 1700, y: 550, z: 0 },
-      curvature: { x: 100, y: -150 },
+      start: { x: 60, y: 5, z: 0 },
+      end: { x: 85, y: 35, z: 0 },
+      x1: 20,
+      y1: 0,
+      x2: 100,
+      y2: 30,
     },
     item: {
       title: "Step 2",
@@ -34,9 +42,12 @@ const curveData = ref([
   },
   {
     line: {
-      start: { x: 1700, y: 550, z: 0 },
-      end: { x: 1000, y: 900, z: 0 },
-      curvature: { x: 500, y: -400 },
+      start: { x: 85, y: 35, z: 0 },
+      end: { x: 50, y: 60, z: 0 },
+      x1: 30,
+      y1: 80,
+      x2: 100,
+      y2: 100,
     },
     item: {
       title: "Step 3",
@@ -46,9 +57,12 @@ const curveData = ref([
   },
   {
     line: {
-      start: { x: 1000, y: 900, z: 0 },
-      end: { x: 500, y: 1400, z: 0 },
-      curvature: { x: -500, y: 0 },
+      start: { x: 50, y: 60, z: 0 },
+      end: { x: 80, y: 95, z: 0 },
+      x1: -50,
+      y1: 50,
+      x2: 100,
+      y2: 100,
     },
     item: {
       title: "Step 4",

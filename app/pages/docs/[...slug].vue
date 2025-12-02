@@ -40,11 +40,8 @@ const { data: page } = await useAsyncData(`content-${path}`, () =>
     .first(),
 );
 
-console.log("Current page:", page.value);
-
 // Get surrounding pages for navigation
-const { data: surroundings } = await useAsyncData("surround", () => {
-  // Use the current page's _path for navigation
+const { data: surroundings, refresh } = await useAsyncData(`surround-${path}`, () => {
   if (!page.value?.path) return null;
   return queryCollectionItemSurroundings("docs", page.value.path, {
     before: 1,
