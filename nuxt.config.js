@@ -76,6 +76,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "netlify",
+    output: {
+      publicDir: "dist",
+    },
   },
 
   css: ["~/main.css", "~/assets/css/transitions.scss"],
