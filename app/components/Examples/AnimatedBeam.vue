@@ -6,11 +6,8 @@
     <animated-beam-wrapper class="flex-1 h-full flex items-center justify-between">
       <div class="w-full h-full flex items-center justify-between">
         <div class="flex flex-col gap-10">
-          <div ref="item" v-for="item in row1" class="w-14 aspect-square rounded-full bg-white p-2">
-            <img
-              :src="'/animatedbeam/' + item"
-              class="w-full h-full object-contain object-center"
-            />
+          <div ref="item" v-for="img in row1" class="w-14 aspect-square rounded-full bg-white p-2">
+            <img :src="'/animatedbeam/' + img" class="w-full h-full object-contain object-center" />
           </div>
         </div>
         <img
@@ -20,11 +17,8 @@
         />
 
         <div class="flex flex-col gap-10">
-          <div ref="item" v-for="item in row2" class="w-14 aspect-square rounded-full bg-white p-2">
-            <img
-              :src="'/animatedbeam/' + item"
-              class="w-full h-full object-contain object-center"
-            />
+          <div ref="item" v-for="img in row2" class="w-14 aspect-square rounded-full bg-white p-2">
+            <img :src="'/animatedbeam/' + img" class="w-full h-full object-contain object-center" />
           </div>
         </div>
       </div>
@@ -43,7 +37,7 @@
 const row1 = ["/pinia.png", "/vue.png", "/nuxt.png"];
 const row2 = ["/supabase.png", "/threejs.png", "/tailwind.png"];
 
-const item = ref();
+const item = ref([]);
 
 function calculateCurvature(index) {
   const itemsPerRow = item.value.length / 2;
