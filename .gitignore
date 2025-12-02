@@ -23,7 +23,11 @@ logs
 .env.*
 !.env.example
 
-#yarn
-yarn.lock
 # Local Netlify folder
 .netlify
+
+# Yarn Berry
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
+.yarn/build-state.yml
